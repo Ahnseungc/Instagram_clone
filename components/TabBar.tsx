@@ -8,6 +8,7 @@ import {
   FiSearch,
   FiUser,
 } from "react-icons/fi";
+import Link from "next/link";
 
 const TabBarContainer = styled.div`
   display: flex;
@@ -30,21 +31,31 @@ const TabIcon = styled.div`
 const TabBar = () => {
   return (
     <TabBarContainer>
-      <TabIcon>
-        <FiHome />
-      </TabIcon>
-      <TabIcon>
-        <FiSearch />
-      </TabIcon>
-      <TabIcon>
-        <FiPlusSquare />
-      </TabIcon>
-      <TabIcon>
-        <FiHeart />
-      </TabIcon>
-      <TabIcon>
-        <FiUser />
-      </TabIcon>
+      <Link href="/home">
+        <TabIcon>
+          <FiHome />
+        </TabIcon>
+      </Link>
+      <Link href="/explore">
+        <TabIcon>
+          <FiSearch />
+        </TabIcon>
+      </Link>
+      <Link href="/new-post">
+        <TabIcon>
+          <FiPlusSquare />
+        </TabIcon>
+      </Link>
+      <Link href="/activity">
+        <TabIcon>
+          <FiHeart />
+        </TabIcon>
+      </Link>
+      <Link href="/profile">
+        <TabIcon>
+          <FiUser />
+        </TabIcon>
+      </Link>
     </TabBarContainer>
   );
 };
